@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /* Primary colors */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* Neutral colors */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background: url(/pattern-background-desktop.svg);
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 1.6rem;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+}
+.text-container {
+  padding: 3rem 4.2rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--Dark-blue);
+  margin-bottom: 1.6rem;
+}
+.main-para {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.price-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-pale-blue);
+  padding: 1.8rem;
+  border-radius: 1rem;
+}
+.music-icon {
+  margin-right: 1.6rem;
+}
+.plan-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.annual-price {
+  color: var(--Dark-blue);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+}
+.annual-price span {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+.price-plan a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.payment-btn button {
+  width: 100%;
+  font-weight: 900;
+  background-color: var(--Bright-blue);
+  padding: 1.6rem 8.4rem;
+  margin-bottom: 2.6rem;
+  color: var(--Very-pale-blue);
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    hsl(245, 75%, 52%, 0.5) 0px 8px 16px -8px;
+  border: none;
+  transition: 0.3s;
+}
+.payment-btn button:hover,
+.payment-btn button:active {
+  background-color: hsl(245, 75%, 52%, 0.7);
+}
+.price-plan a:hover,
+.price-plan a:active {
+  color: hsl(245, 75%, 52%, 0.6);
+}
+.cancel-btn {
+  font-weight: 900;
+  color: var(--Desaturated-blue);
+  cursor: pointer;
+  margin-bottom: 3.6rem;
+}
+.cancel-btn:hover,
+.cancel-btn:active {
+  color: var(--Dark-blue);
+}
+.attribution {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 5rem;
+  background-color: var(--Pale-blue);
+  padding: 1.8rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.attribution a {
+  font-weight: 700;
+  color: var(--Bright-blue);
+  text-decoration: none;
+}
+.attribution a:hover,
+.attribution a:active {
+  color: hsl(245, 75%, 52%, 0.6);
+}
+
+@media only screen and (max-width: 525px) {
+  body {
+    background: url(/pattern-background-mobile.svg);
+  }
+  main {
+    max-width: 35rem;
+  }
+  .payment-btn button {
+    max-width: 100%;
+    padding: 1.6rem 7rem;
+  }
+  .attribution {
+    line-height: 1.4;
+  }
+}
+@media only screen and (max-width: 375px) {
+  body {
+    background: url(/pattern-background-mobile.svg);
+  }
+  main {
+    max-width: 30rem;
+  }
+  .price-plan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .plan-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .payment-btn button {
+    max-width: 100%;
+    padding: 1.6rem 3.2rem;
+  }
+  .attribution {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
